@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+
+    <string name="app_name">Hindi Song Book</string>
+
+    <string name="song_count">%1$d songs</string>
+
+    <string name="song_number">Song #%1$d</string>
+
+    <string name="search_hint">Search by title, chorus, lyrics or song number</string>
+
+    <string name="letter_song_count">%1$s (%2$d songs)</string>
+
+    <string name="add_song">Add song</string>
+
+    <string name="add_new_song">Add New Song</string>
+
+    <string name="song_title">Song Title</string>
+
+    <string name="chorus_line">Chorus Line</string>
+
+    <string name="full_lyrics">Full Lyrics</string>
+
+    <string name="save_song">Save Song</string>
+
+    <string name="all_fields_required">All fields are required</string>
+
+    <string name="song_added">Song added successfully! #%1$d</string>
+
+    <string name="song_add_failed">Failed to add song</string>
+
+    <string name="song_not_found">Song not found</string>
+
+    <string name="import_export_database">Import / Export Database</string>
+
+    <string name="import_export_database_title">Import / Export Database</string>
+
+    <string name="export_title">Export</string>
+
+    <string name="import_title">Import</string>
+
+    <string name="export_json">Export JSON</string>
+
+    <string name="export_sql">Export SQL</string>
+
+    <string name="import_json">Import JSON</string>
+
+    <string name="import_sql">Import SQL</string>
+
+    <string name="danger_zone">Danger Zone</string>
+
+    <string name="clear_all_songs">Clear All Songs</string>
+
+    <string name="available_backups">Available Backups</string>
+
+    <string name="tap_backup_instruction">
+        Tap a file to import or delete
+    </string>
+
+    <string name="total_songs">
+        Total Songs in Database: %1$d
+    </string>
+
+    <string name="json_export_success">
+        JSON export successful
+    </string>
+
+    <string name="json_export_failed">
+        JSON export failed
+    </string>
+
+    <string name="sql_export_success">
+        SQL export successful
+    </string>
+
+    <string name="sql_export_failed">
+        SQL export failed
+    </string>
+
+    <string name="no_backup_files">
+        No .%1$s backup files found
+    </string>
+
+    <string name="select_backup_file">
+        Select Backup File
+    </string>
+
+    <string name="import_database">
+        Import Database
+    </string>
+
+    <string name="import_replace_message">
+        This will replace all current songs with the imported data. Continue?
+    </string>
+
+    <string name="yes">Yes</string>
+
+    <string name="no">No</string>
+
+    <string name="cancel">Cancel</string>
+
+    <string name="import_success">
+        Import successful
+    </string>
+
+    <string name="import_failed">
+        Import failed
+    </string>
+
+    <string name="clear_database">
+        Clear Database
+    </string>
+
+    <string name="clear_database_message">
+        This will delete ALL songs from the database. This action cannot be undone!
+    </string>
+
+    <string name="delete_all">
+        Delete All
+    </string>
+
+    <string name="all_songs_deleted">
+        All songs deleted
+    </string>
+
+    <string name="backup_options">
+        Backup Options
+    </string>
+
+    <string name="import_this_file">
+        Import this file
+    </string>
+
+    <string name="delete_this_file">
+        Delete this file
+    </string>
+
+    <string name="file_deleted">
+        File deleted
+    </string>
+
+</resources>

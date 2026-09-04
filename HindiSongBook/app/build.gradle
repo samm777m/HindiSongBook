@@ -1,0 +1,52 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.yourapp.hindisongbook'
+
+    compileSdk 37
+
+    defaultConfig {
+        applicationId "com.yourapp.hindisongbook"
+
+        minSdk 21
+        targetSdk 37
+
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+        debug {
+            minifyEnabled false
+        }
+
+        release {
+            minifyEnabled false
+
+            proguardFiles(
+                    getDefaultProguardFile('proguard-android-optimize.txt'),
+                    'proguard-rules.pro'
+            )
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+}
+
+dependencies {
+    implementation 'androidx.core:core-ktx:1.19.0'
+    implementation 'androidx.appcompat:appcompat:1.8.0'
+
+    implementation 'com.google.android.material:material:1.13.0'
+
+    implementation 'androidx.recyclerview:recyclerview:1.4.0'
+
+    implementation 'androidx.cardview:cardview:1.0.0'
+
+    implementation 'androidx.coordinatorlayout:coordinatorlayout:1.2.0'
+}
