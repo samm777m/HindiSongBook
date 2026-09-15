@@ -6,71 +6,43 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class SongAdapter(
-    private var songs: List<Song>,
-    private val onSongClick: (Song) -> Unit
-) : RecyclerView.Adapter<SongAdapter.SongViewHolder>() {
+class AlphabetIndexHelper {
 
-    class SongViewHolder(
-        itemView: View
-    ) : RecyclerView.ViewHolder(itemView) {
+    class IndexAdapter(
+        private val letters: List<String>,
+        private val onLetterClick: (String) -> Unit
+    ) : RecyclerView.Adapter<IndexAdapter.IndexViewHolder>() {
 
-        val titleTextView: TextView =
-            itemView.findViewById(R.id.songTitleTextView)
-
-        val chorusTextView: TextView =
-            itemView.findViewById(R.id.songChorusTextView)
-
-        val idTextView: TextView =
-            itemView.findViewById(R.id.songIdTextView)
-    }
-
-    override fun onCreateViewHolder(
-        parent: ViewGroup,
-        viewType: Int
-    ): SongViewHolder {
-
-        val view = LayoutInflater
-            .from(parent.context)
-            .inflate(
-                R.layout.item_song,
-                parent,
-                false
-            )
-
-        return SongViewHolder(view)
-    }
-
-    override fun onBindViewHolder(
-        holder: SongViewHolder,
-        position: Int
-    ) {
-
-        val song = songs[position]
-
-        holder.titleTextView.text = song.title
-
-        holder.chorusTextView.text = song.chorus
-
-        holder.idTextView.text =
-            holder.itemView.context.getString(
-                R.string.song_number,
-                song.id
-            )
-
-        holder.itemView.setOnClickListener {
-            onSongClick(song)
+        class IndexViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+            val letterTextView: TextView =
+                itemView.findViewById(R.id.letterTextView)
         }
-    }
 
-    override fun getItemCount(): Int {
-        return songs.size
-    }
+        override fun onCreateViewHolder(
+            parent: ViewGroup,
+            viewType: Int
+        ): IndexViewHolder {
+            val view = LayoutInflater.from(parent.context)
+                .inflate(R.layout.item_alpha_index, parent, false)
 
-    fun updateSongs(newSongs: List<Song>) {
+            return IndexViewHolder(view)
+        }
 
-        songs = newSongs
+        override fun onBindViewHolder(
+            holder: IndexViewHolder,
+            position: Int
+        ) {
+            val letter = letters[position]
 
-        notifyDataSetChanged()
+            holder.letterTextView.text = letter
+
+            holder.itemView.setOnClickListener {
+                onLetterClick(letter)
+            }
+        }
+
+        override fun getItemCount(): Int {
+            return letters.size
+        }
     }
 }
